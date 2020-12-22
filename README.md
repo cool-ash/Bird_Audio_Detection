@@ -15,7 +15,7 @@ deciding for no of mel-bands.
 
 ## Random Mel Spectograms from Test Set:
 
-![image](https://user-images.githubusercontent.com/42828760/102864450-d1971c80-443c-11eb-9d91-63f1d5e3b742.png)
+![image](https://user-images.githubusercontent.com/42828760/102869133-d7dcc700-4443-11eb-9c46-f029e27f14d8.png)
 
 
 # Model:
