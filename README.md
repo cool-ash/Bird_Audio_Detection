@@ -1,12 +1,12 @@
-# Bird_Audio_Detection:
+# Bird_Audio_Detection(https://www.kaggle.com/c/bird-audio-detection):
 
 ## Pre-processing: 
 <p align="justify">
 The utilized Spectro-temporal features are log mel-band energies, extracted from short frames of 10 second audio. These features has been shown to perform well in various
-audio tagging, sound analysis and sound detection tasks [1,2,3]. Typical value of amount of FFT points chosen for 44 kHz, is 1024, with 50% overlap(512 fft points) using 
+audio tagging, sound analysis and sound detection tasks[1,2,3]. Typical value of amount of FFT points chosen for 44 kHz, is 1024, with 50% overlap(512 fft points) using 
 hamming window. Using the approach of 50% overlap helps to obtain much clear spectrum as it take data from centre of signal frames. 40 log mel-band energy features were 
 extracted from the magnitude spectrum. Librosa library was used in the feature extraction process.Keeping in mind that human everyday sounds and environment sounds like bird 
-singing are often contained in a relatively small portion of the frequency range (mostly around 2-8 kHz), extracting features in that range seems like a good approach which 
+singing are often contained in a relatively small portion of the frequency range (mostly around 2-8 kHz), extracting features in that range seems like a good approach while 
 deciding for no of mel-bands.
 </p>
 ## Random Mel Spectograms from Training Set(ffbird and wwbird datasets):
@@ -18,7 +18,7 @@ deciding for no of mel-bands.
 ![image](https://user-images.githubusercontent.com/42828760/102869133-d7dcc700-4443-11eb-9c46-f029e27f14d8.png)
 
 
-# Model:
+## Model:
 <p align="justify">
 We first went with a CRNN approach whose inspiration was the Kostas research paper(https://arxiv.org/pdf/1703.02317.pdf). 4 Convolution layers with 96 filters were implemented with relu as activation function, Adam optimizer and binary cross entropy. Two gated recurrent neural net layers were also used at end. The accuracy obtained with this approach after training with both datasets was around 64%. 
 </p>
@@ -93,3 +93,11 @@ Metrics – Accuracy: As we are trying to predict a class of sample in form of a
 <p align="justify">
 Training: Initially training was done using 2-fold cross validation technique. We observed that the training and validation accuracy reached close to  91% and 83-85% respectively. With this we achieved a test score of 0.57 in public leaderboard. With little bit of tweaking with kernel size, dropouts and adding l1 and l2 penalties, score increased significantly to 0.697 score. At end to get better results we trained the model with both dataset and achieved a score of 0.7068 on test samples(public) with 315 epochs.  
 </p>
+
+## References:
+<p align="justify">
+[1] E. Cakir, T. Heittola, H. Huttunen, and T. Virtanen, “Polyphonic sound event detection using multi-label deep neural networks,” in IEEE International Joint Conference on Neural Networks (IJCNN), 2015.
+[2] “Detection and classification of acoustic scenes and events (DCASE),” 2016. [Online]. Available:http://www.cs.tut.fi/sgn/arg/dcase2016/tasksound-event-detection-in-real-life-audio.
+[3] E. Cakir, G. Parascandolo, T. Heittola, H. Huttunen, and T. Virtanen, “Convolutional recurrent neural networks for polyphonic sound event detection,” in IEEE/ACM TASLP Special Issue on Sound Scene and Event Analysis, 2017, accepted for publication.
+</p>
+
