@@ -5,3 +5,4 @@ The utilized Spectro-temporal features are log mel-band energies, extracted from
 
 ## Random Mel Spectograms from Training Set(ffbird and wwbird datasets):
 
+![image](https://user-images.githubusercontent.com/42828760/102864128-474eb880-443c-11eb-99ea-dc7f0ce3a8d0.png)
