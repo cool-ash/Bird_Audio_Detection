@@ -9,6 +9,7 @@ extracted from the magnitude spectrum. Librosa library was used in the feature e
 singing are often contained in a relatively small portion of the frequency range (mostly around 2-8 kHz), extracting features in that range seems like a good approach while 
 deciding for no of mel-bands.
 </p>
+
 ## Random Mel Spectograms from Training Set(ffbird and wwbird datasets):
 
 ![image](https://user-images.githubusercontent.com/42828760/102864316-9ac10680-443c-11eb-8081-6a7e8edc59dd.png)
